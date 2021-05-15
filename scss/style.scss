@@ -1,0 +1,465 @@
+@import 'starter';
+@import 'mixins';
+
+header {
+    position: relative;
+    height: 100vh;
+    color: $white;
+    width: 100%;
+    border-top: 8px solid $blue;
+
+    img {
+        filter: brightness(50%);
+        height: 100vh;
+        width: 100%;
+    }
+
+    div {
+        h1 {
+            position: absolute;
+            top: 36%;
+            left: 25%;
+            font-size: 7rem;
+            font-weight: 100;
+        }
+
+        h2 {
+            position: absolute;
+            top: 6%;
+            left: 12%;
+            font-size: 3rem;
+            font-weight: 200;
+            cursor: pointer;
+        }
+
+        p {
+            position: absolute;
+            top: 60%;
+            left: 39%;
+            color: $lightgray;
+            font-size: 2.5rem;
+            font-weight: 100;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 12%;
+
+            ul {
+                @include flex(space-between, center);
+
+                li {
+                    margin: 50px;
+                    
+                    a {
+                        text-transform: uppercase;
+                        color: $white;
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                        transition: $transition;
+                        border-bottom: 1px solid transparent;
+                        padding-bottom: 10px;
+
+                        &:hover {
+                            border-bottom: 1px solid $white;
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+}
+
+.about {
+    .container {
+        @include flex(space-between, flex-start);
+
+        div {
+            padding: 50px 60px;
+            width: 100%;
+        }
+
+        h3 {
+            color: $blue;
+            font-weight: 100;
+            font-size: 1.7rem;
+        }
+
+        p {
+            color: $gray;
+            line-height: 2;
+            font-size: 1.2rem;
+            padding: 60px 0;
+        }
+
+        div:nth-child(2) {
+            border-left: 2px solid lightgray;
+        }
+
+        div:nth-child(3) {
+            border-left: 2px solid lightgray;
+        }
+
+        button {
+            @include btn;
+
+            &:hover {
+               color: $blue;
+               border: 2px solid $blue;
+               background-color: $white;
+            }
+        }
+    }
+}
+
+.team {
+    background-color: $blue;
+    padding: 100px;
+
+    h2 {
+        color: $white;
+        font-size: 3.5rem;
+        font-weight: 100;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    p {
+        color: $lightgray;
+        line-height: 2;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .people {
+        @include flex(space-between, flex-start);
+        margin: 120px auto;
+
+        div {
+            border: 2px solid $lightgray;
+            padding: 50px 0;
+
+            img {
+                border-radius: 50%;
+                height: 200px;
+                width: 200px;
+                display: block;
+                margin: auto;
+            }
+
+            h3 {
+                text-align: center;
+                color: $lightgray;
+                font-weight: 100;
+                font-size: 1.8rem;
+                margin: 30px;
+            }
+
+            p {
+                font-size: 1.4rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.blog {
+    .container {
+        h2 {
+            color: $blue;
+            font-size: 3.5rem;
+            font-weight: 100;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    
+        p {
+            color: $lightgray;
+            line-height: 2;
+            text-align: center;
+            font-size: 1.4rem;
+            color: $gray;
+            margin-bottom: 100px;
+            width: 80%;
+            margin: auto;
+        }
+
+        article {
+            @include flex(center, flex-start);
+            margin: 120px auto 0;
+            border-bottom: 1px solid $lightgray;
+            padding-bottom: 150px;
+
+            div {
+                width: 100%;
+                margin: 0 30px;
+
+                img {
+                    height: 400px;
+                    width: 600px;
+                }
+
+                h3 {
+                    color: $blue;
+                    font-weight: 100;
+                    font-size: 2rem;
+                    margin: 30px 0;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    width: 100%;
+                    padding: 0 40px;
+                    transform: translateX(-40px);
+                    text-align: left
+                }
+
+                button {
+                    @include btn;
+                    margin-top: 30px;
+
+                    &:hover {
+                        color: $blue;
+                        border: 2px solid $blue;
+                        background-color: $white;
+                     }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    @include flex(center, flex-start);
+
+    i {
+        font-size: 3rem;
+        margin: 0 50px 70px 50px;
+        color: $blue;
+        transition: $transition;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 20px;
+        border: 2px solid transparent;
+
+        &:hover {
+            border: 2px solid $blue;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        div {
+            h1 {
+                top: 36%;
+                left: 10%;
+                font-size: 5rem;
+                width: 100%;
+            }
+    
+            h2 {
+                position: absolute;
+                top: 16%;
+                left: 35%;
+                font-size: 3rem;
+                font-weight: 200;
+                cursor: pointer;
+            }
+    
+            p {
+                left: 5%;
+                margin: 0 auto;
+                padding: 0 30px;
+                width: 100%;
+            }
+    
+            nav {
+                position: absolute;
+                top: 0;
+    
+                ul {
+                    @include flex(center, center, row, wrap);
+    
+                    li {
+                       margin: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .about {
+        .container {
+            @include flex(space-between, flex-start, column);
+    
+            div {
+                padding: 30px 10px;
+            }
+    
+            div:nth-child(2) {
+                border: none;
+            }
+    
+            div:nth-child(3) {
+                border: none;
+            }
+        }
+    }
+    
+    .team {
+        padding: 10px;
+
+        .people {
+            @include flex(space-between, flex-start, column);
+
+            div {
+                width: 100%;
+                margin-bottom: 30px;
+
+    
+                img {
+                    height: 300px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+    
+    .blog {
+        .container {
+            p {
+                width: 100%;
+            }
+    
+            article {
+                @include flex(center, center, column);
+                padding-bottom: 0;
+    
+                div {
+                    width: 100%;
+    
+                    img {
+                        height: 400px;
+                        width: 100%;
+                    }
+
+                    h3 {
+                        text-align: center;
+                    }
+    
+                    p {
+                        padding: 0 30px;
+                        transform: translateX(-10px);
+                        text-align: center;
+                    }
+    
+                    button {
+                        @include btn;
+                        margin: 60px auto;
+                    }
+                }
+            }
+        }
+    }
+    
+    footer {
+        @include flex(center, flex-start, row, wrap);
+    
+        i {
+            margin: 0 20px 70px 20px;
+            padding: 10px;
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1600px) {
+    header {
+
+        div {
+            h1 {
+                top: 36%;
+                left: 20%;
+                font-size: 5rem;
+            }
+    
+            h2 {
+                top: 16%;
+                left: 12%;
+            }
+    
+            p {
+                top: 70%;
+                left: 17%;
+            }
+    
+            nav {
+                ul {
+    
+                    li {
+                        margin: 50px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .about {
+        .container {
+            @include flex(space-between, flex-start, column);
+    
+            div {
+                padding: 50px 20px;
+            }
+    
+            div:nth-child(2) {
+                border: none;
+            }
+    
+            div:nth-child(3) {
+                border: none;
+            }
+        }
+    }
+    
+    .team {
+        padding: 20px 10px;
+
+        .people {
+            @include flex(space-between, flex-start, row, wrap);
+    
+            div {
+                border: 2px solid $lightgray;
+                padding: 50px 0;
+                width: 45%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .blog {
+        .container {
+            article {
+                @include flex(center, flex-start, column);
+    
+                div {
+                    width: 100%;
+                    margin: 0 auto;
+    
+                    img {
+                        width: 100%;
+                    }
+    
+
+                    button {
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+

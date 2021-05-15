@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.4s ease;
+}
+
+a:hover {
+  transition: 0.4s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  color: #fff;
+  width: 100%;
+  border-top: 8px solid #5385c1;
+}
+
+header img {
+  filter: brightness(50%);
+  height: 100vh;
+  width: 100%;
+}
+
+header div h1 {
+  position: absolute;
+  top: 36%;
+  left: 25%;
+  font-size: 7rem;
+  font-weight: 100;
+}
+
+header div h2 {
+  position: absolute;
+  top: 6%;
+  left: 12%;
+  font-size: 3rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+header div p {
+  position: absolute;
+  top: 60%;
+  left: 39%;
+  color: lightgray;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+header div nav {
+  position: absolute;
+  top: 0;
+  right: 12%;
+}
+
+header div nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+header div nav ul li {
+  margin: 50px;
+}
+
+header div nav ul li a {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  transition: 0.4s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 10px;
+}
+
+header div nav ul li a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.about .container div {
+  padding: 50px 60px;
+  width: 100%;
+}
+
+.about .container h3 {
+  color: #5385c1;
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+.about .container p {
+  color: #9a9a9a;
+  line-height: 2;
+  font-size: 1.2rem;
+  padding: 60px 0;
+}
+
+.about .container div:nth-child(2) {
+  border-left: 2px solid lightgray;
+}
+
+.about .container div:nth-child(3) {
+  border-left: 2px solid lightgray;
+}
+
+.about .container button {
+  background-color: #5385c1;
+  color: #fff;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.4s ease;
+  font-size: 1.2rem;
+  border: 2px solid #5385c1;
+  outline: none;
+  display: block;
+}
+
+.about .container button:hover {
+  color: #5385c1;
+  border: 2px solid #5385c1;
+  background-color: #fff;
+}
+
+.team {
+  background-color: #5385c1;
+  padding: 100px;
+}
+
+.team h2 {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team p {
+  color: lightgray;
+  line-height: 2;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.team .people {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 120px auto;
+}
+
+.team .people div {
+  border: 2px solid lightgray;
+  padding: 50px 0;
+}
+
+.team .people div img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.team .people div h3 {
+  text-align: center;
+  color: lightgray;
+  font-weight: 100;
+  font-size: 1.8rem;
+  margin: 30px;
+}
+
+.team .people div p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.blog .container h2 {
+  color: #5385c1;
+  font-size: 3.5rem;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog .container p {
+  color: lightgray;
+  line-height: 2;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #9a9a9a;
+  margin-bottom: 100px;
+  width: 80%;
+  margin: auto;
+}
+
+.blog .container article {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 120px auto 0;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 150px;
+}
+
+.blog .container article div {
+  width: 100%;
+  margin: 0 30px;
+}
+
+.blog .container article div img {
+  height: 400px;
+  width: 600px;
+}
+
+.blog .container article div h3 {
+  color: #5385c1;
+  font-weight: 100;
+  font-size: 2rem;
+  margin: 30px 0;
+}
+
+.blog .container article div p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  width: 100%;
+  padding: 0 40px;
+  transform: translateX(-40px);
+  text-align: left;
+}
+
+.blog .container article div button {
+  background-color: #5385c1;
+  color: #fff;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.4s ease;
+  font-size: 1.2rem;
+  border: 2px solid #5385c1;
+  outline: none;
+  display: block;
+  margin-top: 30px;
+}
+
+.blog .container article div button:hover {
+  color: #5385c1;
+  border: 2px solid #5385c1;
+  background-color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+footer i {
+  font-size: 3rem;
+  margin: 0 50px 70px 50px;
+  color: #5385c1;
+  transition: 0.4s ease;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+}
+
+footer i:hover {
+  border: 2px solid #5385c1;
+}
+
+@media (max-width: 767px) {
+  header div h1 {
+    top: 36%;
+    left: 10%;
+    font-size: 5rem;
+    width: 100%;
+  }
+  header div h2 {
+    position: absolute;
+    top: 16%;
+    left: 35%;
+    font-size: 3rem;
+    font-weight: 200;
+    cursor: pointer;
+  }
+  header div p {
+    left: 5%;
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
+  }
+  header div nav {
+    position: absolute;
+    top: 0;
+  }
+  header div nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header div nav ul li {
+    margin: 20px;
+  }
+  .about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .about .container div {
+    padding: 30px 10px;
+  }
+  .about .container div:nth-child(2) {
+    border: none;
+  }
+  .about .container div:nth-child(3) {
+    border: none;
+  }
+  .team {
+    padding: 10px;
+  }
+  .team .people {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .team .people div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .team .people div img {
+    height: 300px;
+    width: 300px;
+  }
+  .blog .container p {
+    width: 100%;
+  }
+  .blog .container article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+  }
+  .blog .container article div {
+    width: 100%;
+  }
+  .blog .container article div img {
+    height: 400px;
+    width: 100%;
+  }
+  .blog .container article div h3 {
+    text-align: center;
+  }
+  .blog .container article div p {
+    padding: 0 30px;
+    transform: translateX(-10px);
+    text-align: center;
+  }
+  .blog .container article div button {
+    background-color: #5385c1;
+    color: #fff;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-size: 1.2rem;
+    border: 2px solid #5385c1;
+    outline: none;
+    display: block;
+    margin: 60px auto;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  footer i {
+    margin: 0 20px 70px 20px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1600px) {
+  header div h1 {
+    top: 36%;
+    left: 20%;
+    font-size: 5rem;
+  }
+  header div h2 {
+    top: 16%;
+    left: 12%;
+  }
+  header div p {
+    top: 70%;
+    left: 17%;
+  }
+  header div nav ul li {
+    margin: 50px;
+  }
+  .about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .about .container div {
+    padding: 50px 20px;
+  }
+  .about .container div:nth-child(2) {
+    border: none;
+  }
+  .about .container div:nth-child(3) {
+    border: none;
+  }
+  .team {
+    padding: 20px 10px;
+  }
+  .team .people {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .team .people div {
+    border: 2px solid lightgray;
+    padding: 50px 0;
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .blog .container article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .blog .container article div {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .blog .container article div img {
+    width: 100%;
+  }
+  .blog .container article div button {
+    margin-bottom: 60px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
